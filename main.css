@@ -1,0 +1,73 @@
+
+/* STYLES */
+
+* {
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* align-items: center; */
+}
+
+.back {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  margin-bottom: -110px;
+}
+
+.rotate {
+  margin-left: calc(100vw / 3 - 50px);
+  position: fixed;
+  z-index: 2;
+  animation-duration: 25s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.asteroids {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+
+.left_structure {
+  margin-top: calc(100vh / 5);
+  width: 50px;
+  height: 50px;
+  z-index: 3;
+  animation-duration: 15s;
+  animation-name: left_structure;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+/* KEYFRAMES */ 
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes left_structure {
+  0% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
